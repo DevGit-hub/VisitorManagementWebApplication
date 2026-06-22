@@ -1,0 +1,38 @@
+﻿@model IEnumerable<VisitorManagementSystem.Models.User>
+
+<h2>Administrators</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Full Name</th>
+        <th>NIC</th>
+        <th>Username</th>
+        <th>Created By</th>
+        <th>Created Date</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.FullName</td>
+            <td>@item.NIC</td>
+            <td>@item.Username</td>
+            <td>@item.CreatedBy</td>
+            <td>@item.CreatedDate</td>
+            <td>
+                @Html.ActionLink(
+                    "Edit",
+                    "Edit",
+                    new { id = item.UserId },
+                    new { @class = "btn btn-warning btn-sm" })
+
+                @Html.ActionLink(
+                    "Delete",
+                    "Delete",
+                    new { id = item.UserId },
+                    new { @class = "btn btn-danger btn-sm" })
+            </td>
+        </tr>
+    }
+</table>

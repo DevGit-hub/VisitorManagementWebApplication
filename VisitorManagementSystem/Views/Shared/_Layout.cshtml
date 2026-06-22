@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .nav-link {
+        color: #333;
+        font-weight: 500;
+    }
+
+    .nav-link:hover {
+        background-color: #f1f1f1;
+        border-radius: 6px;
+    }
+</style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    @if (!(ViewContext.RouteData.Values["Controller"].ToString() == "Account"
+        && ViewContext.RouteData.Values["Action"].ToString() == "Login"))
+    {
+        <!-- Top Navbar -->
+        <nav class="navbar navbar-dark bg-dark px-3">
+            <span class="navbar-brand mb-0 h1">
+                Visitor Management System
+            </span>
+
+            <div>
+                <span class="text-white me-3">
+                    Hello @Session["Username"]
+                </span>
+
+                @Html.ActionLink(
+                    "Logout",
+                    "Logout",
+                    "Account",
+                    null,
+                    new { @class = "btn btn-danger btn-sm" }
+                )
+            </div>
+        </nav>
+
+        <div class="d-flex">
+
+            <!-- Sidebar -->
+            <div class="bg-light border-end"
+                 style="width:250px; min-height:100vh;">
+
+                <ul class="nav flex-column p-3">
+
+                    <li class="nav-item mb-2">
+                        @Html.ActionLink(
+                            "Dashboard",
+                            "Index",
+                            "Home",
+                            null,
+                            new { @class = "nav-link" })
+                    </li>
+
+                    <li class="nav-item mb-2">
+                        @Html.ActionLink(
+                            "Visitors",
+                            "Index",
+                            "Visitor",
+                            null,
+                            new { @class = "nav-link" })
+                    </li>
+
+                    <li class="nav-item mb-2">
+                        @Html.ActionLink(
+                            "Add Visitor",
+                            "Create",
+                            "Visitor",
+                            null,
+                            new { @class = "nav-link" })
+                    </li>
+
+                    @if (Session["Role"] != null &&
+                         Session["Role"].ToString() == "Admin")
+                    {
+                        <li class="nav-item mb-2">
+                            @Html.ActionLink(
+                                "Users",
+                                "Users",
+                                "User",
+                                null,
+                                new { @class = "nav-link" })
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            @Html.ActionLink(
+                                "Admins",
+                                "Admins",
+                                "User",
+                                null,
+                                new { @class = "nav-link" })
+                        </li>
+                    }
+
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="container-fluid p-4">
+                @RenderBody()
+            </div>
+
+        </div>
+    }
+    else
+    {
+        @RenderBody()
+    }
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

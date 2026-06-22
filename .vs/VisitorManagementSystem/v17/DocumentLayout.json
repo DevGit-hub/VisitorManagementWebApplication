@@ -1,0 +1,650 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\intern\\VisitorManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\views\\user\\admins.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\views\\user\\admins.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|e:\\intern\\visitormanagementsystem\\visitormanagementsystem\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\views\\visitor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\views\\visitor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\migrations\\202606190908045_updatenic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\migrations\\202606190908045_updatenic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\models\\visitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\models\\visitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\models\\visitorcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\models\\visitorcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\views\\user\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\views\\user\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\controllers\\visitorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\controllers\\visitorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\migrations\\202606190632269_fixdefaultcreateddate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\migrations\\202606190632269_fixdefaultcreateddate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\devdi\\AppData\\Local\\Temp\\3vqocezp..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\migrations\\202606190615185_fixdatetimeissue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\migrations\\202606190615185_fixdatetimeissue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\migrations\\202606190607412_addusersoftdelete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\migrations\\202606190607412_addusersoftdelete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\views\\user\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\views\\user\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\views\\user\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\views\\user\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\migrations\\202606181035004_adduserdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\migrations\\202606181035004_adduserdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\views\\visitor\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\views\\visitor\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\devdi\\AppData\\Local\\Temp\\nc15s2we..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\migrations\\202606180923342_updateuserstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\migrations\\202606180923342_updateuserstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\migrations\\202606180435022_updateusertable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\migrations\\202606180435022_updateusertable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\migrations\\202606170815338_addisdeleted.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\migrations\\202606170815338_addisdeleted.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\views\\visitor\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\views\\visitor\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\views\\visitor\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\views\\visitor\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\views\\visitor\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\views\\visitor\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/VisitorDB/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\intern\\VisitorManagementSystem\\SQLQuery4.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery4.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|E:\\intern\\VisitorManagementSystem\\visitormanagementsystem\\migrations\\202606120716439_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F8373-821F-4FFA-9507-215445E31BCE}|VisitorManagementSystem\\VisitorManagementSystem.csproj|solutionrelative:visitormanagementsystem\\migrations\\202606120716439_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\intern\\VisitorManagementSystem\\SQLQuery3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Controllers\\AccountController.cs",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "VisitorManagementSystem\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAiwBgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T08:11:19.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Controllers\\UserController.cs",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Controllers\\UserController.cs",
+              "RelativeToolTip": "VisitorManagementSystem\\Controllers\\UserController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T03:51:07.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\User\\Index.cshtml",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Views\\User\\Index.cshtml",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\User\\Index.cshtml",
+              "RelativeToolTip": "VisitorManagementSystem\\Views\\User\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-18T04:01:20.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "202606190632269_FixDefaultCreatedDate.cs",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\202606190632269_FixDefaultCreatedDate.cs",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Migrations\\202606190632269_FixDefaultCreatedDate.cs",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\202606190632269_FixDefaultCreatedDate.cs",
+              "RelativeToolTip": "VisitorManagementSystem\\Migrations\\202606190632269_FixDefaultCreatedDate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T06:32:30.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\Visitor\\Index.cshtml",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Views\\Visitor\\Index.cshtml",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\Visitor\\Index.cshtml",
+              "RelativeToolTip": "VisitorManagementSystem\\Views\\Visitor\\Index.cshtml",
+              "ViewState": "AgIAAMcBAAAAAAAAAAAwwIQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-12T08:31:53.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "VisitorManagementSystem\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-12T07:57:10.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Admins.cshtml",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\User\\Admins.cshtml",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Views\\User\\Admins.cshtml",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\User\\Admins.cshtml",
+              "RelativeToolTip": "VisitorManagementSystem\\Views\\User\\Admins.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAB4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-19T04:17:33.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "VisitorManagementSystem\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACUAAAAAAAAAAAAgwCwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-12T08:12:40.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "VisitorContext.cs",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Models\\VisitorContext.cs",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Models\\VisitorContext.cs",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Models\\VisitorContext.cs",
+              "RelativeToolTip": "VisitorManagementSystem\\Models\\VisitorContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T07:14:19.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Visitor.cs",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Models\\Visitor.cs",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Models\\Visitor.cs",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Models\\Visitor.cs",
+              "RelativeToolTip": "VisitorManagementSystem\\Models\\Visitor.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABEAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T08:32:32.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Models\\User.cs",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Models\\User.cs",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Models\\User.cs",
+              "RelativeToolTip": "VisitorManagementSystem\\Models\\User.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAA/wBAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T07:14:02.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "VisitorController.cs",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Controllers\\VisitorController.cs",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Controllers\\VisitorController.cs",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Controllers\\VisitorController.cs",
+              "RelativeToolTip": "VisitorManagementSystem\\Controllers\\VisitorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T08:35:24.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "202606190908045_UPdateNIC.cs",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\202606190908045_UPdateNIC.cs",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Migrations\\202606190908045_UPdateNIC.cs",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\202606190908045_UPdateNIC.cs",
+              "RelativeToolTip": "VisitorManagementSystem\\Migrations\\202606190908045_UPdateNIC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T09:08:09.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Users.cshtml",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\User\\Users.cshtml",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Views\\User\\Users.cshtml",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\User\\Users.cshtml",
+              "RelativeToolTip": "VisitorManagementSystem\\Views\\User\\Users.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-19T04:18:00.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "3vqocezp..sql",
+              "DocumentMoniker": "C:\\Users\\devdi\\AppData\\Local\\Temp\\3vqocezp..sql",
+              "ToolTip": "C:\\Users\\devdi\\AppData\\Local\\Temp\\3vqocezp..sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-06-19T06:27:47.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "202606190615185_FixDateTimeIssue.cs",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\202606190615185_FixDateTimeIssue.cs",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Migrations\\202606190615185_FixDateTimeIssue.cs",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\202606190615185_FixDateTimeIssue.cs",
+              "RelativeToolTip": "VisitorManagementSystem\\Migrations\\202606190615185_FixDateTimeIssue.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T06:15:22.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "202606190607412_AddUserSoftDelete.cs",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\202606190607412_AddUserSoftDelete.cs",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Migrations\\202606190607412_AddUserSoftDelete.cs",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\202606190607412_AddUserSoftDelete.cs",
+              "RelativeToolTip": "VisitorManagementSystem\\Migrations\\202606190607412_AddUserSoftDelete.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T06:07:45.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\User\\Delete.cshtml",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Views\\User\\Delete.cshtml",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\User\\Delete.cshtml",
+              "RelativeToolTip": "VisitorManagementSystem\\Views\\User\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-19T06:05:53.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\User\\Edit.cshtml",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Views\\User\\Edit.cshtml",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\User\\Edit.cshtml",
+              "RelativeToolTip": "VisitorManagementSystem\\Views\\User\\Edit.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwCoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-19T05:48:22.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\User\\Create.cshtml",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Views\\User\\Create.cshtml",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\User\\Create.cshtml",
+              "RelativeToolTip": "VisitorManagementSystem\\Views\\User\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-18T04:03:27.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Views\\Account\\Login.cshtml",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "VisitorManagementSystem\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAAANUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-12T08:01:03.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "202606181035004_AddUserDetails.cs",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\202606181035004_AddUserDetails.cs",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Migrations\\202606181035004_AddUserDetails.cs",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\202606181035004_AddUserDetails.cs",
+              "RelativeToolTip": "VisitorManagementSystem\\Migrations\\202606181035004_AddUserDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T10:35:04.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\Configuration.cs",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Migrations\\Configuration.cs",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\Configuration.cs",
+              "RelativeToolTip": "VisitorManagementSystem\\Migrations\\Configuration.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T07:16:22.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\Visitor\\Create.cshtml",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Views\\Visitor\\Create.cshtml",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\Visitor\\Create.cshtml",
+              "RelativeToolTip": "VisitorManagementSystem\\Views\\Visitor\\Create.cshtml",
+              "ViewState": "AgIAAOQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-12T08:34:54.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "nc15s2we..sql",
+              "DocumentMoniker": "C:\\Users\\devdi\\AppData\\Local\\Temp\\nc15s2we..sql",
+              "ToolTip": "C:\\Users\\devdi\\AppData\\Local\\Temp\\nc15s2we..sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-06-18T10:15:27.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "202606180923342_UpdateUserstable.cs",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\202606180923342_UpdateUserstable.cs",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Migrations\\202606180923342_UpdateUserstable.cs",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\202606180923342_UpdateUserstable.cs",
+              "RelativeToolTip": "VisitorManagementSystem\\Migrations\\202606180923342_UpdateUserstable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T09:23:39.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\App_Start\\RouteConfig.cs",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "VisitorManagementSystem\\App_Start\\RouteConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T09:05:22.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Web.config",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Web.config",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Web.config",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Web.config",
+              "RelativeToolTip": "VisitorManagementSystem\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-06-12T07:15:00.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "202606180435022_UpdateUserTable.cs",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\202606180435022_UpdateUserTable.cs",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Migrations\\202606180435022_UpdateUserTable.cs",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\202606180435022_UpdateUserTable.cs",
+              "RelativeToolTip": "VisitorManagementSystem\\Migrations\\202606180435022_UpdateUserTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T04:35:07.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "202606170815338_AddIsDeleted.cs",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\202606170815338_AddIsDeleted.cs",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Migrations\\202606170815338_AddIsDeleted.cs",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\202606170815338_AddIsDeleted.cs",
+              "RelativeToolTip": "VisitorManagementSystem\\Migrations\\202606170815338_AddIsDeleted.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T08:15:39.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "VisitorManagementSystem\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T07:51:44.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Web.config",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\Web.config",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Views\\Web.config",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\Web.config",
+              "RelativeToolTip": "VisitorManagementSystem\\Views\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-06-17T05:41:17.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Global.asax.cs",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Global.asax.cs",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Global.asax.cs",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Global.asax.cs",
+              "RelativeToolTip": "VisitorManagementSystem\\Global.asax.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T04:53:42.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\Visitor\\Details.cshtml",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Views\\Visitor\\Details.cshtml",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\Visitor\\Details.cshtml",
+              "RelativeToolTip": "VisitorManagementSystem\\Views\\Visitor\\Details.cshtml",
+              "ViewState": "AgIAAA4BAAAAAAAAAAAAwCoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-12T09:53:44.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\Visitor\\Delete.cshtml",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Views\\Visitor\\Delete.cshtml",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\Visitor\\Delete.cshtml",
+              "RelativeToolTip": "VisitorManagementSystem\\Views\\Visitor\\Delete.cshtml",
+              "ViewState": "AgIAAAIBAAAAAAAAAAAAwB4BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-12T09:32:27.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\Visitor\\Edit.cshtml",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Views\\Visitor\\Edit.cshtml",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Views\\Visitor\\Edit.cshtml",
+              "RelativeToolTip": "VisitorManagementSystem\\Views\\Visitor\\Edit.cshtml",
+              "ViewState": "AgIAADQBAAAAAAAAAAAAwFABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-12T09:32:32.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "SQLQuery4.sql",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\SQLQuery4.sql",
+              "RelativeDocumentMoniker": "SQLQuery4.sql",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\SQLQuery4.sql",
+              "RelativeToolTip": "SQLQuery4.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-06-12T07:49:32.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "dbo.Users.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/VisitorDB/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/VisitorDB/True/SqlTable/dbo.Users.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-06-12T07:48:46.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "202606120716439_InitialCreate.cs",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\202606120716439_InitialCreate.cs",
+              "RelativeDocumentMoniker": "VisitorManagementSystem\\Migrations\\202606120716439_InitialCreate.cs",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\VisitorManagementSystem\\Migrations\\202606120716439_InitialCreate.cs",
+              "RelativeToolTip": "VisitorManagementSystem\\Migrations\\202606120716439_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T07:16:58.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "SQLQuery3.sql",
+              "DocumentMoniker": "E:\\intern\\VisitorManagementSystem\\SQLQuery3.sql",
+              "RelativeDocumentMoniker": "SQLQuery3.sql",
+              "ToolTip": "E:\\intern\\VisitorManagementSystem\\SQLQuery3.sql",
+              "RelativeToolTip": "SQLQuery3.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-06-12T07:11:36.423Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

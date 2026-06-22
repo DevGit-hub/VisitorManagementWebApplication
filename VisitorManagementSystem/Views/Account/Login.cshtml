@@ -1,0 +1,213 @@
+﻿@model VisitorManagementSystem.Models.User
+
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        background: #F5F3FF;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .lg-page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+        background: linear-gradient(135deg, #EEF2FF 0%, #F5F3FF 50%, #FDF4FF 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .lg-blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(70px);
+        opacity: 0.35;
+        pointer-events: none;
+    }
+
+    .blob-1 {
+        width: 340px;
+        height: 340px;
+        background: #818CF8;
+        top: -80px;
+        left: -80px;
+    }
+
+    .blob-2 {
+        width: 260px;
+        height: 260px;
+        background: #C084FC;
+        bottom: -60px;
+        right: -60px;
+    }
+
+    .blob-3 {
+        width: 180px;
+        height: 180px;
+        background: #67E8F9;
+        top: 40%;
+        left: 60%;
+    }
+
+    .lg-card {
+        position: relative;
+        z-index: 1;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 24px;
+        padding: 2.5rem 2.25rem 2rem;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0 20px 60px rgba(99, 102, 241, 0.12), 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .lg-icon {
+        width: 56px;
+        height: 56px;
+        background: linear-gradient(135deg, #6366F1, #8B5CF6);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        margin: 0 auto 1.25rem;
+        box-shadow: 0 6px 20px rgba(99,102,241,0.35);
+    }
+
+    .lg-title {
+        font-size: 24px;
+        font-weight: 800;
+        color: #111827;
+        text-align: center;
+        margin: 0 0 4px;
+        letter-spacing: -0.5px;
+    }
+
+    .lg-sub {
+        font-size: 13px;
+        color: #6B7280;
+        text-align: center;
+        margin: 0 0 2rem;
+    }
+
+    .lg-field {
+        margin-bottom: 1.1rem;
+    }
+
+    .lg-label {
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #374151;
+        margin-bottom: 6px;
+    }
+
+    .lg-field input[type="text"],
+    .lg-field input[type="password"] {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1.5px solid #E5E7EB;
+        border-radius: 12px;
+        padding: 11px 14px;
+        font-size: 14px;
+        color: #111827;
+        background: #F9FAFB;
+        outline: none;
+        transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+    }
+
+        .lg-field input[type="text"]:focus,
+        .lg-field input[type="password"]:focus {
+            border-color: #6366F1;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(99,102,241,0.12);
+        }
+
+    .lg-btn {
+        width: 100%;
+        background: linear-gradient(135deg, #6366F1, #8B5CF6);
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        padding: 12px;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        margin-top: 0.5rem;
+        letter-spacing: 0.02em;
+        transition: opacity 0.15s, transform 0.1s, box-shadow 0.15s;
+        box-shadow: 0 4px 16px rgba(99,102,241,0.3);
+    }
+
+        .lg-btn:hover {
+            opacity: 0.92;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 24px rgba(99,102,241,0.35);
+        }
+
+        .lg-btn:active {
+            transform: scale(0.98);
+        }
+
+    .lg-error {
+        margin-top: 1rem;
+        background: #FEF2F2;
+        border: 1px solid #FECACA;
+        border-radius: 10px;
+        padding: 9px 14px;
+        font-size: 13px;
+        color: #DC2626;
+        text-align: center;
+    }
+
+    .lg-divider {
+        height: 1px;
+        background: #F3F4F6;
+        margin: 1.5rem 0 0;
+    }
+
+    .lg-footer {
+        text-align: center;
+        font-size: 12px;
+        color: #9CA3AF;
+        margin-top: 1rem;
+    }
+</style>
+
+<div class="lg-page">
+    <div class="lg-blob blob-1"></div>
+    <div class="lg-blob blob-2"></div>
+    <div class="lg-blob blob-3"></div>
+
+    <div class="lg-card">
+        <div class="lg-icon">🪪</div>
+        <h2 class="lg-title">Welcome Back</h2>
+        <p class="lg-sub">Sign in to Visitor Management System</p>
+
+        @using (Html.BeginForm())
+        {
+            <div class="lg-field">
+                <label class="lg-label">Username</label>
+                @Html.TextBoxFor(m => m.Username, new { placeholder = "Enter your username" })
+            </div>
+
+            <div class="lg-field">
+                <label class="lg-label">Password</label>
+                @Html.PasswordFor(m => m.Password, new { placeholder = "••••••••" })
+            </div>
+
+            <button type="submit" class="lg-btn">Sign In →</button>
+
+            <p style="color:red">@ViewBag.Error</p>
+        }
+
+        <div class="lg-divider"></div>
+        <p class="lg-footer">Visitor Management System &copy; @DateTime.Now.Year</p>
+    </div>
+</div>

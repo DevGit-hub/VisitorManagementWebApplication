@@ -1,0 +1,336 @@
+﻿@model VisitorManagementSystem.Models.Visitor
+@{
+    ViewBag.Title = "Edit";
+}
+
+<style>
+    .ve-wrap {
+        max-width: 680px;
+        margin: 2.5rem auto;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    /* header */
+    .ve-header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 2rem;
+    }
+
+    .ve-header-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #F59E0B, #F97316);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        box-shadow: 0 4px 14px rgba(245,158,11,0.35);
+        flex-shrink: 0;
+    }
+
+    .ve-header-text h2 {
+        font-size: 22px;
+        font-weight: 800;
+        color: #111827;
+        margin: 0;
+        letter-spacing: -0.4px;
+    }
+
+    .ve-header-text p {
+        font-size: 13px;
+        color: #6B7280;
+        margin: 3px 0 0;
+    }
+
+    /* card */
+    .ve-card {
+        background: #fff;
+        border-radius: 20px;
+        border: 1px solid #E5E7EB;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .ve-card-accent {
+        height: 5px;
+        background: linear-gradient(90deg, #F59E0B, #F97316, #EF4444);
+    }
+
+    /* sections */
+    .ve-section {
+        padding: 1.5rem 1.75rem;
+    }
+
+        .ve-section + .ve-section {
+            border-top: 1px solid #F3F4F6;
+        }
+
+    .ve-section-title {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #9CA3AF;
+        margin: 0 0 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+        .ve-section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #F3F4F6;
+        }
+
+    /* grid */
+    .ve-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+        .ve-row.full {
+            grid-template-columns: 1fr;
+        }
+
+    .ve-field {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+        .ve-field label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .ve-field .form-control,
+        .ve-field select.form-control {
+            border: 1.5px solid #E5E7EB;
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-size: 14px;
+            color: #111827;
+            background: #F9FAFB;
+            width: 100%;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+            -webkit-appearance: none;
+        }
+
+            .ve-field .form-control:focus,
+            .ve-field select.form-control:focus {
+                border-color: #F59E0B;
+                background: #fff;
+                box-shadow: 0 0 0 3px rgba(245,158,11,0.12);
+            }
+
+        .ve-field .text-danger {
+            font-size: 12px;
+            color: #EF4444;
+            margin: 0;
+        }
+
+    .validation-summary-errors {
+        background: #FEF2F2;
+        border: 1px solid #FECACA;
+        border-radius: 10px;
+        padding: 12px 16px;
+        margin-bottom: 1.25rem;
+        color: #B91C1C;
+        font-size: 13px;
+    }
+
+    /* status select chevron */
+    .ve-select-wrap {
+        position: relative;
+    }
+
+        .ve-select-wrap::after {
+            content: '▾';
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9CA3AF;
+            pointer-events: none;
+            font-size: 12px;
+        }
+
+    /* footer */
+    .ve-footer {
+        background: #FFFBEB;
+        border-top: 1px solid #FDE68A;
+        padding: 1.25rem 1.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .ve-back {
+        font-size: 13px;
+        color: #6B7280;
+        text-decoration: none;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: color 0.15s;
+    }
+
+        .ve-back:hover {
+            color: #374151;
+            text-decoration: none;
+        }
+
+    .ve-save-btn {
+        background: linear-gradient(135deg, #F59E0B, #F97316);
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 28px;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        letter-spacing: 0.01em;
+        transition: opacity 0.15s, transform 0.1s, box-shadow 0.15s;
+        box-shadow: 0 3px 12px rgba(245,158,11,0.3);
+    }
+
+        .ve-save-btn:hover {
+            opacity: 0.92;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(245,158,11,0.35);
+        }
+
+        .ve-save-btn:active {
+            transform: scale(0.98);
+        }
+
+    @@media (max-width: 600px) {
+        .ve-row {
+            grid-template-columns: 1fr;
+        }
+
+        .ve-wrap {
+            margin: 1rem;
+        }
+    }
+</style>
+
+<div class="ve-wrap">
+
+    <div class="ve-header">
+        <div class="ve-header-icon">✏️</div>
+        <div class="ve-header-text">
+            <h2>Edit Visitor</h2>
+            <p>Update visitor details below</p>
+        </div>
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.VisitorID)
+
+        <div class="ve-card">
+            <div class="ve-card-accent"></div>
+
+            @* Personal Info *@
+            <div class="ve-section">
+                <p class="ve-section-title">Personal Info</p>
+                @Html.ValidationSummary(true, "", new { @class = "validation-summary-errors" })
+
+                <div class="ve-row">
+                    <div class="ve-field">
+                        @Html.LabelFor(model => model.FullName)
+                        @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="ve-field">
+                        @Html.LabelFor(model => model.NIC)
+                        @Html.EditorFor(model => model.NIC, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.NIC, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="ve-row" style="margin-top:16px;">
+                    <div class="ve-field">
+                        @Html.LabelFor(model => model.Phone)
+                        @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="ve-field">
+                        @Html.LabelFor(model => model.PersonToVisit)
+                        @Html.EditorFor(model => model.PersonToVisit, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PersonToVisit, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            @* Visit Details *@
+            <div class="ve-section">
+                <p class="ve-section-title">Visit Details</p>
+
+                <div class="ve-row full">
+                    <div class="ve-field">
+                        @Html.LabelFor(model => model.Purpose)
+                        @Html.EditorFor(model => model.Purpose, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Purpose, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="ve-row" style="margin-top:16px;">
+                    <div class="ve-field">
+                        @Html.LabelFor(model => model.CheckInTime)
+                        @Html.EditorFor(model => model.CheckInTime, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CheckInTime, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="ve-field">
+                        @Html.LabelFor(model => model.CheckOutTime)
+                        @Html.EditorFor(model => model.CheckOutTime, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CheckOutTime, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            @* Status *@
+            <div class="ve-section">
+                <p class="ve-section-title">Status</p>
+                <div class="ve-row">
+                    <div class="ve-field">
+                        @Html.LabelFor(model => model.Status)
+                        <div class="ve-select-wrap">
+                            @Html.DropDownListFor(model => model.Status,
+                                     new SelectList(new[]
+                                     {
+                                    "Checked In",
+                                    "Checked Out"
+                         }),
+                                     new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @* Footer *@
+            <div class="ve-footer">
+                @Html.ActionLink("← Back to List", "Index", null, new { @class = "ve-back" })
+                <input type="submit" value="Save Changes" class="ve-save-btn" />
+            </div>
+
+        </div>
+    }
+
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

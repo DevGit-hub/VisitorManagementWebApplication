@@ -1,0 +1,43 @@
+﻿@model VisitorManagementSystem.Models.User
+
+<h2>Edit User</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(m => m.UserId)
+
+    <div class="form-group">
+        <label>Full Name</label>
+        @Html.TextBoxFor(m => m.FullName,
+            new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>NIC</label>
+        @Html.TextBoxFor(m => m.NIC,
+            new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Username</label>
+        @Html.TextBoxFor(m => m.Username,
+            new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Role</label>
+
+        @Html.DropDownListFor(
+            m => m.Role,
+            new SelectList(new[] { "Admin", "User" }),
+            new { @class = "form-control" })
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-primary">
+        Save
+    </button>
+}

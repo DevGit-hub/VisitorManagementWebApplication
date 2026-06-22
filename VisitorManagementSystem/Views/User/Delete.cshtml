@@ -1,0 +1,24 @@
+﻿@model VisitorManagementSystem.Models.User
+
+<h2>Delete User</h2>
+
+<p>
+    Are you sure you want to delete
+    <strong>@Model.Username</strong> ?
+</p>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <button type="submit"
+            class="btn btn-danger">
+        Delete
+    </button>
+
+    @Html.ActionLink(
+        "Cancel",
+        "Users",
+        null,
+        new { @class = "btn btn-secondary" })
+}
