@@ -194,7 +194,12 @@
     <Compile Include="Migrations\202606190908045_UPdateNIC.Designer.cs">
       <DependentUpon>202606190908045_UPdateNIC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202606230346442_AddMenuTable.cs" />
+    <Compile Include="Migrations\202606230346442_AddMenuTable.Designer.cs">
+      <DependentUpon>202606230346442_AddMenuTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Visitor.cs" />
     <Compile Include="Models\VisitorContext.cs" />
@@ -256,11 +261,12 @@
     <Content Include="Views\Visitor\Index.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
-    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\User\CreateUser.cshtml" />
     <Content Include="Views\User\Admins.cshtml" />
     <Content Include="Views\User\Users.cshtml" />
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\User\Delete.cshtml" />
+    <Content Include="Views\User\CreateAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -325,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202606190908045_UPdateNIC.resx">
       <DependentUpon>202606190908045_UPdateNIC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202606230346442_AddMenuTable.resx">
+      <DependentUpon>202606230346442_AddMenuTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

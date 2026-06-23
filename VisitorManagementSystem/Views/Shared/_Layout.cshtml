@@ -1,25 +1,243 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <style>
-    .nav-link {
-        color: #333;
-        font-weight: 500;
-    }
-
-    .nav-link:hover {
-        background-color: #f1f1f1;
-        border-radius: 6px;
-    }
-</style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --brand-1: #6c5ce7;
+            --brand-2: #341f97;
+            --brand-glow: #a29bfe;
+            --sidebar-bg: #ffffff;
+            --sidebar-active: #6c5ce7;
+            --sidebar-text: #4b4b63;
+        }
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f4f5fa;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar.navbar-dark.bg-dark {
+            background: linear-gradient(120deg, var(--brand-2), var(--brand-1) 55%, #00cec9) !important;
+            background-size: 200% 200%;
+            animation: navGradient 12s ease infinite;
+            box-shadow: 0 4px 18px rgba(108, 92, 231, 0.35);
+            border-bottom: none;
+            position: relative;
+            overflow: hidden;
+            min-height: 64px;
+        }
+
+        @@keyframes navGradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .navbar.navbar-dark.bg-dark::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 40%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.06);
+            transform: rotate(15deg);
+            pointer-events: none;
+        }
+
+        .navbar-brand {
+            font-weight: 700 !important;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1;
+        }
+
+            .navbar-brand::before {
+                content: "\F60D";
+                font-family: "bootstrap-icons" !important;
+                font-size: 1.3rem;
+                background: rgba(255, 255, 255, 0.18);
+                padding: 8px;
+                border-radius: 10px;
+                line-height: 1;
+            }
+
+        .navbar .text-white.me-3 {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            backdrop-filter: blur(4px);
+            z-index: 1;
+        }
+
+        .navbar .btn-danger {
+            border: none;
+            background: rgba(255, 255, 255, 0.95);
+            color: #d63031;
+            font-weight: 600;
+            border-radius: 20px;
+            padding: 6px 16px;
+            transition: all 0.25s ease;
+            z-index: 1;
+        }
+
+            .navbar .btn-danger:hover {
+                background: #d63031;
+                color: #fff;
+                transform: translateY(-1px);
+                box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            }
+
+        /* ===== SIDEBAR ===== */
+        .d-flex > .bg-light.border-end {
+            background: var(--sidebar-bg) !important;
+            border-end: none !important;
+            box-shadow: 3px 0 16px rgba(52, 31, 151, 0.06);
+            padding-top: 10px;
+            position: relative;
+        }
+
+        .nav.flex-column.p-3 {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .nav-item {
+            margin-bottom: 0 !important;
+        }
+
+        .nav-link {
+            color: var(--sidebar-text) !important;
+            font-weight: 500 !important;
+            display: flex;
+            align-items: center;
+            padding: 11px 16px;
+            border-radius: 10px;
+            position: relative;
+            transition: all 0.25s ease;
+            text-decoration: none;
+        }
+
+        /* icon glyphs added purely via CSS, based on item order — no markup/logic changes */
+        .nav-item:nth-child(1) .nav-link::before {
+            content: "\F286";
+            font-family: "bootstrap-icons" !important;
+            margin-right: 10px;
+            font-size: 1.05rem;
+            color: var(--brand-1);
+        }
+
+        .nav-item:nth-child(2) .nav-link::before {
+            content: "\F4D8";
+            font-family: "bootstrap-icons" !important;
+            margin-right: 10px;
+            font-size: 1.05rem;
+            color: var(--brand-1);
+        }
+
+        .nav-item:nth-child(3) .nav-link::before {
+            content: "\F4F8";
+            font-family: "bootstrap-icons" !important;
+            margin-right: 10px;
+            font-size: 1.05rem;
+            color: var(--brand-1);
+        }
+
+        .nav-item:nth-child(4) .nav-link::before {
+            content: "\F4DA";
+            font-family: "bootstrap-icons" !important;
+            margin-right: 10px;
+            font-size: 1.05rem;
+            color: var(--brand-1);
+        }
+
+        .nav-item:nth-child(5) .nav-link::before {
+            content: "\F4B9";
+            font-family: "bootstrap-icons" !important;
+            margin-right: 10px;
+            font-size: 1.05rem;
+            color: var(--brand-1);
+        }
+
+        .nav-link:hover {
+            background-color: #f1f0ff !important;
+            color: var(--brand-2) !important;
+            border-radius: 10px !important;
+            transform: translateX(3px);
+        }
+
+            .nav-link:hover::before {
+                transform: scale(1.12);
+            }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 0%;
+            background: var(--sidebar-active);
+            border-radius: 0 4px 4px 0;
+            transition: height 0.25s ease;
+        }
+
+        .nav-link:hover::after {
+            height: 65%;
+        }
+
+        /* subtle divider before the Admin-only section */
+        .nav-item:nth-child(4) {
+            margin-top: 8px;
+            padding-top: 12px;
+            border-top: 1px dashed #e2e0f5;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .container-fluid.p-4 {
+            animation: fadeIn 0.4s ease;
+        }
+
+        @@keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-
     @if (!(ViewContext.RouteData.Values["Controller"].ToString() == "Account"
         && ViewContext.RouteData.Values["Action"].ToString() == "Login"))
     {
@@ -28,98 +246,111 @@
             <span class="navbar-brand mb-0 h1">
                 Visitor Management System
             </span>
-
             <div>
                 <span class="text-white me-3">
-                    Hello @Session["Username"]
+                    @if (Session["Role"].ToString() == "Admin")
+                    {
+                        <span>Hello Admin @Session["Username"]</span>
+                    }
+                    else
+                    {
+                        <span>Hello @Session["Username"]</span>
+                    }
                 </span>
-
                 @Html.ActionLink(
-                    "Logout",
-                    "Logout",
-                    "Account",
-                    null,
-                    new { @class = "btn btn-danger btn-sm" }
-                )
+                              "Logout",
+                              "Logout",
+                              "Account",
+                              null,
+                              new { @class = "btn btn-danger btn-sm" }
+                          )
             </div>
         </nav>
-
         <div class="d-flex">
-
             <!-- Sidebar -->
             <div class="bg-light border-end"
                  style="width:250px; min-height:100vh;">
-
                 <ul class="nav flex-column p-3">
-
                     <li class="nav-item mb-2">
                         @Html.ActionLink(
-                            "Dashboard",
-                            "Index",
-                            "Home",
-                            null,
-                            new { @class = "nav-link" })
+                                           "Dashboard",
+                                           "Index",
+                                           "Home",
+                                           null,
+                                           new { @class = "nav-link" })
                     </li>
-
                     <li class="nav-item mb-2">
                         @Html.ActionLink(
-                            "Visitors",
-                            "Index",
-                            "Visitor",
-                            null,
-                            new { @class = "nav-link" })
+                                           "Visitors",
+                                           "Index",
+                                           "Visitor",
+                                           null,
+                                           new { @class = "nav-link" })
                     </li>
-
                     <li class="nav-item mb-2">
                         @Html.ActionLink(
-                            "Add Visitor",
-                            "Create",
-                            "Visitor",
-                            null,
-                            new { @class = "nav-link" })
+                                           "Add Visitor",
+                                           "Create",
+                                           "Visitor",
+                                           null,
+                                           new { @class = "nav-link" })
                     </li>
-
                     @if (Session["Role"] != null &&
-                         Session["Role"].ToString() == "Admin")
+     Session["Role"].ToString() == "Admin")
                     {
                         <li class="nav-item mb-2">
                             @Html.ActionLink(
-                                "Users",
-                                "Users",
-                                "User",
-                                null,
-                                new { @class = "nav-link" })
+                                     "Users",
+                                     "Users",
+                                     "User",
+                                     null,
+                                     new { @class = "nav-link" })
                         </li>
 
                         <li class="nav-item mb-2">
                             @Html.ActionLink(
-                                "Admins",
-                                "Admins",
-                                "User",
-                                null,
-                                new { @class = "nav-link" })
+                                     "Admins",
+                                     "Admins",
+                                     "User",
+                                     null,
+                                     new { @class = "nav-link" })
+                        </li>
+
+                        <hr />
+
+                        <li class="nav-item mb-2">
+                            @Html.ActionLink(
+                                     "Add User",
+                                     "CreateUser",
+                                     "User",
+                                     null,
+                                     new { @class = "nav-link text-primary" })
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            @Html.ActionLink(
+                                     "Add Admin",
+                                     "CreateAdmin",
+                                     "User",
+                                     null,
+                                     new { @class = "nav-link text-success" })
                         </li>
                     }
-
                 </ul>
             </div>
-
             <!-- Main Content -->
             <div class="container-fluid p-4">
                 @RenderBody()
             </div>
-
         </div>
     }
     else
     {
         @RenderBody()
     }
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/jqueryval")
     @RenderSection("scripts", required: false)
-
 </body>
 </html>

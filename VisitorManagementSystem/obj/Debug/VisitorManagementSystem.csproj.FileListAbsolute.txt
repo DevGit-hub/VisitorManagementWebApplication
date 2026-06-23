@@ -102,3 +102,4 @@ E:\intern\VisitorManagementSystem\VisitorManagementSystem\obj\Debug\VisitorManag
 E:\intern\VisitorManagementSystem\VisitorManagementSystem\obj\Debug\VisitorManagementSystem.Migrations.FixDateTimeIssue.resources
 E:\intern\VisitorManagementSystem\VisitorManagementSystem\obj\Debug\VisitorManagementSystem.Migrations.FixDefaultCreatedDate.resources
 E:\intern\VisitorManagementSystem\VisitorManagementSystem\obj\Debug\VisitorManagementSystem.Migrations.UPdateNIC.resources
+E:\intern\VisitorManagementSystem\VisitorManagementSystem\obj\Debug\VisitorManagementSystem.Migrations.AddMenuTable.resources

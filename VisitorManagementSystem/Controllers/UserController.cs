@@ -37,26 +37,63 @@ namespace VisitorManagementSystem.Controllers
     );
         }
 
-        public ActionResult Create()
+        public ActionResult CreateUser()
         {
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(User user)
+        public ActionResult CreateUser(User user)
         {
             if (ModelState.IsValid)
             {
+                user.Role = "User";
 
-                user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
-                user.CreatedBy = Session["Username"].ToString();
-                user.CreatedDate = DateTime.Now;
+                user.Password =
+                    BCrypt.Net.BCrypt.HashPassword(user.Password);
+
+                user.CreatedBy =
+                    Session["Username"].ToString();
+
+                user.CreatedDate =
+                    DateTime.Now;
 
                 db.Users.Add(user);
                 db.SaveChanges();
 
                 return RedirectToAction("Users");
+            }
+
+            return View(user);
+        }
+
+        public ActionResult CreateAdmin()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateAdmin(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                user.Role = "Admin";
+
+                user.Password =
+                    BCrypt.Net.BCrypt.HashPassword(user.Password);
+
+                user.CreatedBy =
+                    Session["Username"].ToString();
+
+                user.CreatedDate =
+                    DateTime.Now;
+
+                db.Users.Add(user);
+                db.SaveChanges();
+
+                return RedirectToAction("Admins");
             }
 
             return View(user);
@@ -114,6 +151,11 @@ namespace VisitorManagementSystem.Controllers
 
                 db.SaveChanges();
 
+                if (existingUser.Role == "Admin")
+                {
+                    return RedirectToAction("Admins");
+                }
+
                 return RedirectToAction("Users");
             }
 
@@ -143,8 +185,21 @@ namespace VisitorManagementSystem.Controllers
         {
             User user = db.Users.Find(id);
 
-            user.IsDeleted = true;
+            if (user == null)
+            {
+                return HttpNotFound();
+            }
 
+            //  super admin protection
+            if (user.Username == "Devika_admin")
+            {
+                TempData["Error"] = "Super Admin account cannot be deleted.";
+                return RedirectToAction("Admins");
+            }
+
+           
+
+            user.IsDeleted = true;
             db.SaveChanges();
 
             return RedirectToAction("Users");
