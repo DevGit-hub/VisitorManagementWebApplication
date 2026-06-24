@@ -104,3 +104,4 @@ E:\intern\VisitorManagementSystem\VisitorManagementSystem\obj\Debug\VisitorManag
 E:\intern\VisitorManagementSystem\VisitorManagementSystem\obj\Debug\VisitorManagementSystem.Migrations.UPdateNIC.resources
 E:\intern\VisitorManagementSystem\VisitorManagementSystem\obj\Debug\VisitorManagementSystem.Migrations.AddMenuTable.resources
 E:\intern\VisitorManagementSystem\VisitorManagementSystem\obj\Debug\VisitorManagementSystem.Migrations.AddRoleMenuTable.resources
+E:\intern\VisitorManagementSystem\VisitorManagementSystem\obj\Debug\VisitorManagementSystem.Migrations.AuditFields.resources

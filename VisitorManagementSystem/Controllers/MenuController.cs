@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using VisitorManagementSystem.Models;
@@ -7,7 +8,16 @@ public class MenuController : Controller
 {
     private VisitorContext db = new VisitorContext();
 
+    protected override void OnActionExecuting(ActionExecutingContext filterContext)
+    {
+        if (Session["UserId"] == null)
+        {
+            filterContext.Result = RedirectToAction("Login", "Account");
+            return;
+        }
 
+        base.OnActionExecuting(filterContext);
+    }
 
     // SIDEBAR 
     public PartialViewResult Sidebar()
@@ -88,6 +98,12 @@ public class MenuController : Controller
                 MenuId = menu.MenuId
             });
 
+            menu.CreatedBy = Session["Username"].ToString();
+            menu.CreatedDate = DateTime.Now;
+
+            db.Menus.Add(menu);
+            db.SaveChanges();
+
             db.SaveChanges();
 
             return RedirectToAction("Index");
@@ -131,6 +147,9 @@ public class MenuController : Controller
             existing.Action = menu.Action;
             existing.ParentMenuId = menu.ParentMenuId;
 
+            existing.UpdatedBy = Session["Username"].ToString();
+            existing.UpdatedDate = DateTime.Now;
+
             // IMPORTANT: keep old value
             existing.IsActive = existing.IsActive;
 
@@ -165,6 +184,8 @@ public class MenuController : Controller
         if (menu != null)
         {
             menu.IsActive = false;
+            menu.DeletedBy = Session["Username"].ToString();
+            menu.DeletedDate = DateTime.Now;
             db.SaveChanges();
         }
 

@@ -290,9 +290,10 @@
                 <div class="ve-row" style="margin-top:16px;">
                     <div class="ve-field">
                         @Html.LabelFor(model => model.CheckInTime)
-                        @Html.EditorFor(model => model.CheckInTime, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.CheckInTime, "", new { @class = "text-danger" })
-                    </div>
+                        @Html.TextBoxFor(model => model.CheckInTime,
+                                "{0:yyyy-MM-ddTHH:mm}",
+                                new { @class = "form-control", type = "datetime-local" })                        @Html.ValidationMessageFor(model => model.CheckInTime, "", new { @class = "text-danger" })
+                            </div>
                     <div class="ve-field">
                         @Html.LabelFor(model => model.CheckOutTime)
                         @Html.EditorFor(model => model.CheckOutTime, new { htmlAttributes = new { @class = "form-control" } })

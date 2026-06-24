@@ -280,36 +280,15 @@
                 <div class="vcf-row" style="margin-top:16px;">
                     <div class="vcf-field">
                         @Html.LabelFor(model => model.CheckInTime)
-                        @Html.EditorFor(model => model.CheckInTime, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.CheckInTime, "", new { @class = "text-danger" })
-                    </div>
-                    <div class="vcf-field">
-                        @Html.LabelFor(model => model.CheckOutTime)
-                        @Html.EditorFor(model => model.CheckOutTime, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.CheckOutTime, "", new { @class = "text-danger" })
-                    </div>
+                        @Html.TextBoxFor(model => model.CheckInTime,
+                                "{0:yyyy-MM-ddTHH:mm}",
+                                new { @class = "form-control", type = "datetime-local" })                        @Html.ValidationMessageFor(model => model.CheckInTime, "", new { @class = "text-danger" })
+                            </div>
+                    
                 </div>
             </div>
 
-            @* Status *@
-            <div class="vcf-section">
-                <p class="vcf-section-title">Status</p>
-                <div class="vcf-row">
-                    <div class="vcf-field">
-                        @Html.LabelFor(model => model.Status)
-                        <div class="status-select-wrap">
-                            @Html.DropDownListFor(model => model.Status,
-                                    new SelectList(new[]
-                                    {
-                                   "Checked In",
-                                   "Checked Out"
-                        }),
-                                    "Select Status",
-                                    new { @class = "form-control" })
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
 
             @* Footer *@
             <div class="vcf-footer">

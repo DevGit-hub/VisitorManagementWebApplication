@@ -149,6 +149,9 @@ namespace VisitorManagementSystem.Controllers
                 existingUser.Username = user.Username;
                 existingUser.Role = user.Role;
 
+                existingUser.UpdatedBy = Session["Username"].ToString();
+                existingUser.UpdatedDate = DateTime.Now;
+
                 db.SaveChanges();
 
                 if (existingUser.Role == "Admin")
@@ -200,6 +203,10 @@ namespace VisitorManagementSystem.Controllers
            
 
             user.IsDeleted = true;
+
+            user.DeletedBy = Session["Username"].ToString();
+            user.DeletedDate = DateTime.Now;
+
             db.SaveChanges();
 
             return RedirectToAction("Users");

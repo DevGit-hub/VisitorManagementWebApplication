@@ -248,11 +248,11 @@
             </span>
             <div>
                 <span class="text-white me-3">
-                    @if (Session["Role"].ToString() == "Admin")
+                    @if (Session["Role"] != null && Session["Role"].ToString() == "Admin")
                     {
                         <span>Hello Admin @Session["Username"]</span>
                     }
-                    else
+                    else if (Session["Username"] != null)
                     {
                         <span>Hello @Session["Username"]</span>
                     }

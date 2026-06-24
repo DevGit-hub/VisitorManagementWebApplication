@@ -203,6 +203,10 @@
     <Compile Include="Migrations\202606230433040_AddRoleMenuTable.Designer.cs">
       <DependentUpon>202606230433040_AddRoleMenuTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202606240611175_AuditFields.cs" />
+    <Compile Include="Migrations\202606240611175_AuditFields.Designer.cs">
+      <DependentUpon>202606240611175_AuditFields.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\RoleMenu.cs" />
@@ -349,6 +353,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202606230433040_AddRoleMenuTable.resx">
       <DependentUpon>202606230433040_AddRoleMenuTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202606240611175_AuditFields.resx">
+      <DependentUpon>202606240611175_AuditFields.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

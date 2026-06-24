@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace VisitorManagementSystem.Models
 {
@@ -16,5 +17,14 @@ namespace VisitorManagementSystem.Models
         public int? ParentMenuId { get; set; }
 
         public bool IsActive { get; set; }
+
+        public string CreatedBy { get; set; }
+        public DateTime? CreatedDate { get; set; }
+
+        public string UpdatedBy { get; set; }
+        public DateTime? UpdatedDate { get; set; }
+
+        public string DeletedBy { get; set; }
+        public DateTime? DeletedDate { get; set; }
     }
 }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 using VisitorManagementSystem.Models;
 
 namespace VisitorManagementSystem.Controllers
@@ -59,12 +60,19 @@ namespace VisitorManagementSystem.Controllers
         
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "VisitorID,FullName,NIC,Phone,Purpose,PersonToVisit,CheckInTime,CheckOutTime")] Visitor visitor)
+        public ActionResult Create([Bind(Include = "VisitorID,FullName,NIC,Phone,Purpose,PersonToVisit,CheckInTime")] Visitor visitor)
         {
 
-            if (db.Visitors.Any(v => v.NIC == visitor.NIC))
+            if (db.Visitors.Any(v =>
+                   v.NIC == visitor.NIC &&
+                   !v.IsDeleted &&
+                   v.Status == "Checked In"))
             {
-                ModelState.AddModelError("NIC", "This NIC already exists.");
+                ModelState.AddModelError(
+                    "NIC",
+                    "This visitor is already checked in."
+                );
+
                 return View(visitor);
             }
 
@@ -72,8 +80,9 @@ namespace VisitorManagementSystem.Controllers
             {
                 visitor.CheckInTime = DateTime.Now;
                 visitor.Status = "Checked In";
-                
 
+                visitor.CreatedBy = Session["Username"].ToString();
+                visitor.CreatedDate = DateTime.Now;
                 db.Visitors.Add(visitor);
                 db.SaveChanges();
 
@@ -122,7 +131,19 @@ namespace VisitorManagementSystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(visitor).State = EntityState.Modified;
+                var existing = db.Visitors.Find(visitor.VisitorID);
+
+                existing.FullName = visitor.FullName;
+                existing.NIC = visitor.NIC;
+                existing.Phone = visitor.Phone;
+                existing.Purpose = visitor.Purpose;
+                existing.PersonToVisit = visitor.PersonToVisit;
+                existing.CheckInTime = visitor.CheckInTime;
+                existing.CheckOutTime = visitor.CheckOutTime;
+
+                existing.UpdatedBy = Session["Username"].ToString();
+                existing.UpdatedDate = DateTime.Now;
+
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -153,6 +174,8 @@ namespace VisitorManagementSystem.Controllers
             if (visitor != null)
             {
                 visitor.IsDeleted = true;
+                visitor.DeletedBy = Session["Username"].ToString();
+                visitor.DeletedDate = DateTime.Now;
                 db.SaveChanges();
             }
 
