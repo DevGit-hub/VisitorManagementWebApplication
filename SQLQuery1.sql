@@ -1,10 +1,13 @@
-﻿CREATE TABLE Users
-(
-    UserId INT IDENTITY(1,1) PRIMARY KEY,
-    Username NVARCHAR(50),
-    Password NVARCHAR(50),
-    Role NVARCHAR(20)
-);
+﻿INSERT INTO RoleMenus(Role, MenuId)
+VALUES
+('Admin',1),
+('Admin',2),
+('Admin',3),
+('Admin',4),
+('Admin',5),
+('Admin',6),
+('Admin',7),
 
-INSERT INTO Users (Username, Password, Role)
-VALUES ('admin', 'admin123', 'Admin');
+('User',1),
+('User',2),
+('User',3)

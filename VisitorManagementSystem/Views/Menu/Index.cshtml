@@ -1,0 +1,31 @@
+﻿@model IEnumerable<VisitorManagementSystem.Models.Menu>
+
+<h2>Menu Management</h2>
+
+<p>
+    @Html.ActionLink("Add Menu", "Create", null, new { @class = "btn btn-primary" })
+</p>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Display Name</th>
+        <th>Controller</th>
+        <th>Action</th>
+        <th>Parent Id</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.DisplayName</td>
+            <td>@item.Controller</td>
+            <td>@item.Action</td>
+            <td>@item.ParentMenuId</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MenuId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MenuId })
+            </td>
+        </tr>
+    }
+</table>

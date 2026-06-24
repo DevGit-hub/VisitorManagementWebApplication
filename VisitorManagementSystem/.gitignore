@@ -1,0 +1,17 @@
+# Visual Studio cache
+.vs/
+
+# Build output
+bin/
+obj/
+
+# User settings
+*.user
+*.suo
+
+# Logs
+*.log
+
+# SQL local files (optional)
+*.mdf
+*.ldf

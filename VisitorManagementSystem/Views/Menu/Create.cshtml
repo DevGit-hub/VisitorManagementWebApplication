@@ -1,0 +1,46 @@
+﻿@model VisitorManagementSystem.Models.Menu
+
+<h2>Create Menu</h2>
+
+@using (Html.BeginForm())
+{
+
+    <div>
+        Select Role
+        @Html.DropDownList("Role",
+            new SelectList(new[] { "Admin", "User" }))
+    </div>
+
+    <div>
+        Display Name
+        @Html.TextBoxFor(m => m.DisplayName)
+    </div>
+
+    <div>
+        Controller
+        @Html.DropDownListFor(m => m.Controller,
+            new SelectList(ViewBag.Controllers))
+    </div>
+
+    <div>
+        Action
+        @Html.DropDownListFor(m => m.Action,
+            new SelectList(ViewBag.Actions))
+    </div>
+
+    <div>
+        Parent Menu
+        @Html.DropDownListFor(
+     m => m.ParentMenuId,
+     new SelectList(
+         ViewBag.ParentMenus,
+         "MenuId",
+         "DisplayName"
+     ),
+     "-- Top Level Menu --",
+     new { @class = "form-control" }
+     )
+    </div>
+
+    <button type="submit">Save</button>
+}

@@ -73,8 +73,8 @@
         }
 
             .navbar-brand::before {
-                content: "\F60D";
-                font-family: "bootstrap-icons" !important;
+                
+                
                 font-size: 1.3rem;
                 background: rgba(255, 255, 255, 0.18);
                 padding: 8px;
@@ -268,75 +268,12 @@
         </nav>
         <div class="d-flex">
             <!-- Sidebar -->
+
             <div class="bg-light border-end"
                  style="width:250px; min-height:100vh;">
-                <ul class="nav flex-column p-3">
-                    <li class="nav-item mb-2">
-                        @Html.ActionLink(
-                                           "Dashboard",
-                                           "Index",
-                                           "Home",
-                                           null,
-                                           new { @class = "nav-link" })
-                    </li>
-                    <li class="nav-item mb-2">
-                        @Html.ActionLink(
-                                           "Visitors",
-                                           "Index",
-                                           "Visitor",
-                                           null,
-                                           new { @class = "nav-link" })
-                    </li>
-                    <li class="nav-item mb-2">
-                        @Html.ActionLink(
-                                           "Add Visitor",
-                                           "Create",
-                                           "Visitor",
-                                           null,
-                                           new { @class = "nav-link" })
-                    </li>
-                    @if (Session["Role"] != null &&
-     Session["Role"].ToString() == "Admin")
-                    {
-                        <li class="nav-item mb-2">
-                            @Html.ActionLink(
-                                     "Users",
-                                     "Users",
-                                     "User",
-                                     null,
-                                     new { @class = "nav-link" })
-                        </li>
+                
+                    @Html.Action("Sidebar", "Menu")
 
-                        <li class="nav-item mb-2">
-                            @Html.ActionLink(
-                                     "Admins",
-                                     "Admins",
-                                     "User",
-                                     null,
-                                     new { @class = "nav-link" })
-                        </li>
-
-                        <hr />
-
-                        <li class="nav-item mb-2">
-                            @Html.ActionLink(
-                                     "Add User",
-                                     "CreateUser",
-                                     "User",
-                                     null,
-                                     new { @class = "nav-link text-primary" })
-                        </li>
-
-                        <li class="nav-item mb-2">
-                            @Html.ActionLink(
-                                     "Add Admin",
-                                     "CreateAdmin",
-                                     "User",
-                                     null,
-                                     new { @class = "nav-link text-success" })
-                        </li>
-                    }
-                </ul>
             </div>
             <!-- Main Content -->
             <div class="container-fluid p-4">

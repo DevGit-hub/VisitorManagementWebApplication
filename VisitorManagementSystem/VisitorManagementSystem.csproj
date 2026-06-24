@@ -145,6 +145,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\VisitorController.cs" />
     <Compile Include="Global.asax.cs">
@@ -198,14 +199,20 @@
     <Compile Include="Migrations\202606230346442_AddMenuTable.Designer.cs">
       <DependentUpon>202606230346442_AddMenuTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202606230433040_AddRoleMenuTable.cs" />
+    <Compile Include="Migrations\202606230433040_AddRoleMenuTable.Designer.cs">
+      <DependentUpon>202606230433040_AddRoleMenuTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\RoleMenu.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Visitor.cs" />
     <Compile Include="Models\VisitorContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -267,6 +274,11 @@
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\User\Delete.cshtml" />
     <Content Include="Views\User\CreateAdmin.cshtml" />
+    <Content Include="Views\Menu\_Sidebar.cshtml" />
+    <Content Include="Views\Menu\Index.cshtml" />
+    <Content Include="Views\Menu\Create.cshtml" />
+    <Content Include="Views\Menu\Edit.cshtml" />
+    <Content Include="Views\Menu\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -334,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202606230346442_AddMenuTable.resx">
       <DependentUpon>202606230346442_AddMenuTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202606230433040_AddRoleMenuTable.resx">
+      <DependentUpon>202606230433040_AddRoleMenuTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

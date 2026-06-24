@@ -1,0 +1,39 @@
+﻿@model List<VisitorManagementSystem.Models.Menu>
+
+@{
+    var parents = Model.Where(m => m.ParentMenuId == null).ToList();
+}
+
+<ul class="nav flex-column p-3">
+
+    @foreach (var parent in parents)
+    {
+        <li class="nav-item mb-2">
+
+            <!-- Parent clickable too -->
+            @Html.ActionLink(
+                parent.DisplayName,
+                parent.Action,
+                parent.Controller,
+                null,
+                new { @class = "nav-link fw-bold" })
+
+            <ul class="nav flex-column ms-3">
+
+                @foreach (var child in Model.Where(c => c.ParentMenuId == parent.MenuId))
+                {
+                    <li>
+                        @Html.ActionLink(
+                            child.DisplayName,
+                            child.Action,
+                            child.Controller,
+                            null,
+                            new { @class = "nav-link" })
+                    </li>
+                }
+
+            </ul>
+        </li>
+    }
+
+</ul>
