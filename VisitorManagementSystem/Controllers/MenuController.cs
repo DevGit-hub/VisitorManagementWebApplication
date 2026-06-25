@@ -81,22 +81,11 @@ public class MenuController : Controller
 
     // CREATE MENU (POST)
     [HttpPost]
-    
-    public ActionResult Create(Menu menu, string Role)
+public ActionResult Create(Menu menu, string[] Roles)
     {
         if (ModelState.IsValid)
         {
             menu.IsActive = true;
-
-            db.Menus.Add(menu);
-            db.SaveChanges();
-
-            // AUTO assign role
-            db.RoleMenus.Add(new RoleMenu
-            {
-                Role = Role,
-                MenuId = menu.MenuId
-            });
 
             menu.CreatedBy = Session["Username"].ToString();
             menu.CreatedDate = DateTime.Now;
@@ -104,10 +93,28 @@ public class MenuController : Controller
             db.Menus.Add(menu);
             db.SaveChanges();
 
-            db.SaveChanges();
+            if (Roles != null)
+            {
+                foreach (var role in Roles)
+                {
+                    db.RoleMenus.Add(new RoleMenu
+                    {
+                        Role = role,
+                        MenuId = menu.MenuId,
+                        CreatedBy = Session["Username"].ToString(),
+                        CreatedDate = DateTime.Now
+                    });
+                }
+
+                db.SaveChanges();
+            }
 
             return RedirectToAction("Index");
         }
+
+        ViewBag.ParentMenus = db.Menus
+                                .Where(m => m.IsActive)
+                                .ToList();
 
         return View(menu);
     }

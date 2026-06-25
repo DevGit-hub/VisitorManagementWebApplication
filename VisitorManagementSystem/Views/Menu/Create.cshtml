@@ -4,43 +4,74 @@
 
 @using (Html.BeginForm())
 {
+    @Html.AntiForgeryToken()
 
-    <div>
-        Select Role
-        @Html.DropDownList("Role",
-            new SelectList(new[] { "Admin", "User" }))
+    <div class="form-group">
+        <label>Select Role</label>
+        <div class="form-group">
+            <label>Roles</label>
+
+            <div>
+                <label>
+                    <input type="checkbox"
+                           name="Roles"
+                           value="Admin" />
+                    Admin
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox"
+                           name="Roles"
+                           value="User" />
+                    User
+                </label>
+            </div>
+        </div>
     </div>
 
-    <div>
-        Display Name
-        @Html.TextBoxFor(m => m.DisplayName)
+    <div class="form-group">
+        @Html.LabelFor(m => m.DisplayName)
+        @Html.TextBoxFor(
+            m => m.DisplayName,
+            new { @class = "form-control" }
+        )
     </div>
 
-    <div>
-        Controller
-        @Html.DropDownListFor(m => m.Controller,
-            new SelectList(ViewBag.Controllers))
+    <div class="form-group">
+        @Html.LabelFor(m => m.Controller)
+        @Html.TextBoxFor(
+            m => m.Controller,
+            new { @class = "form-control" }
+        )
     </div>
 
-    <div>
-        Action
-        @Html.DropDownListFor(m => m.Action,
-            new SelectList(ViewBag.Actions))
+    <div class="form-group">
+        @Html.LabelFor(m => m.Action)
+        @Html.TextBoxFor(
+            m => m.Action,
+            new { @class = "form-control" }
+        )
     </div>
 
-    <div>
-        Parent Menu
+    <div class="form-group">
+        <label>Parent Menu</label>
         @Html.DropDownListFor(
-     m => m.ParentMenuId,
-     new SelectList(
-         ViewBag.ParentMenus,
-         "MenuId",
-         "DisplayName"
-     ),
-     "-- Top Level Menu --",
-     new { @class = "form-control" }
-     )
+            m => m.ParentMenuId,
+            new SelectList(
+                ViewBag.ParentMenus,
+                "MenuId",
+                "DisplayName"
+            ),
+            "-- Top Level Menu --",
+            new { @class = "form-control" }
+        )
     </div>
 
-    <button type="submit">Save</button>
+    <br />
+
+    <button type="submit" class="btn btn-primary">
+        Create Menu
+    </button>
 }

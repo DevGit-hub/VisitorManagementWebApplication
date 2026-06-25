@@ -1,51 +1,321 @@
 ﻿@model IEnumerable<VisitorManagementSystem.Models.User>
+@{
+    ViewBag.Title = "Index";
+}
 
-<h2>System Users</h2>
-
-<p>
-    @Html.ActionLink(
-        "Add User",
-        "CreateUser",
-        "User",
-        null,
-        new { @class = "btn btn-primary mb-3" })
-</p>
-
-<table class="table table-bordered">
-    <tr>
-        <th>Full Name</th>
-        <th>NIC</th>
-        <th>Username</th>
-        <th>Created By</th>
-        <th>Created Date</th>
-        <th>Updated By</th>
-        <th>Updated Date</th>
-        <th>Actions</th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.FullName</td>
-            <td>@item.NIC</td>
-            <td>@item.Username</td>
-            <td>@item.CreatedBy</td>
-            <td>@item.CreatedDate</td>
-            <td>@item.UpdatedBy</td>
-            <td>@item.UpdatedDate</td>
-            <td>
-                @Html.ActionLink(
-                    "Edit",
-                    "Edit",
-                    new { id = item.UserId },
-                    new { @class = "btn btn-warning btn-sm" })
-
-                @Html.ActionLink(
-                    "Delete",
-                    "Delete",
-                    new { id = item.UserId },
-                    new { @class = "btn btn-danger btn-sm" })
-            </td>
-        </tr>
+<style>
+    .vc-wrap {
+        padding: 2rem 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
-</table>
+
+    /* ── Top bar ── */
+    .vc-topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 1.75rem;
+    }
+
+    .vc-brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .vc-brand-icon {
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(135deg, #6366F1, #8B5CF6);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        box-shadow: 0 4px 14px rgba(99,102,241,0.3);
+    }
+
+    .vc-brand-title {
+        font-size: 22px;
+        font-weight: 800;
+        color: #111827;
+        margin: 0;
+        letter-spacing: -0.5px;
+    }
+
+    .vc-brand-sub {
+        font-size: 13px;
+        color: #6B7280;
+        margin: 2px 0 0;
+    }
+
+    .vc-btn-new {
+        background: #4F46E5;
+        color: #fff !important;
+        text-decoration: none !important;
+        padding: 10px 22px;
+        border-radius: 12px;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+        box-shadow: 0 2px 8px rgba(79,70,229,0.25);
+    }
+
+        .vc-btn-new:hover {
+            background: #4338CA;
+            box-shadow: 0 4px 16px rgba(79,70,229,0.35);
+            transform: translateY(-1px);
+        }
+
+    /* ── Table ── */
+    .vc-table-wrap {
+        background: #fff;
+        border-radius: 18px;
+        border: 1px solid #E5E7EB;
+        overflow-x: auto;
+        overflow-y: hidden;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+
+    .vc-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13.5px;
+    }
+
+        .vc-table thead tr {
+            background: #F9FAFB;
+            border-bottom: 1.5px solid #E5E7EB;
+        }
+
+        .vc-table thead th {
+            padding: 13px 16px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            color: #9CA3AF;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .vc-table tbody tr {
+            border-bottom: 1px solid #F3F4F6;
+            transition: background 0.1s;
+        }
+
+            .vc-table tbody tr:last-child {
+                border-bottom: none;
+            }
+
+            .vc-table tbody tr:hover {
+                background: #FAFAFA;
+            }
+
+        .vc-table tbody td {
+            padding: 13px 16px;
+            color: #374151;
+            vertical-align: middle;
+        }
+
+    /* name cell with avatar */
+    .vc-name-cell {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .vc-avatar {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: #EEF2FF;
+        color: #4F46E5;
+        font-size: 12px;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        text-transform: uppercase;
+        border: 2px solid #E0E7FF;
+    }
+
+    .vc-name-main {
+        font-weight: 600;
+        color: #111827;
+        font-size: 13.5px;
+    }
+
+    .vc-name-sub {
+        font-size: 11px;
+        color: #9CA3AF;
+        font-family: 'Courier New', monospace;
+    }
+
+    /* action buttons */
+    .vc-actions {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .vc-act {
+        padding: 5px 13px;
+        border-radius: 8px;
+        font-size: 12px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background 0.12s, color 0.12s;
+        white-space: nowrap;
+    }
+
+        .vc-act:hover {
+            text-decoration: none;
+        }
+
+    .act-edit {
+        color: #4F46E5;
+        background: #EEF2FF;
+    }
+
+        .act-edit:hover {
+            background: #E0E7FF;
+        }
+
+    .act-delete {
+        color: #DC2626;
+        background: #FEF2F2;
+    }
+
+        .act-delete:hover {
+            background: #FEE2E2;
+        }
+
+    /* empty state */
+    .vc-empty {
+        text-align: center;
+        padding: 3.5rem 1rem;
+        color: #9CA3AF;
+    }
+
+    .vc-empty-emoji {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .vc-empty-text {
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    .vc-empty-sub {
+        font-size: 13px;
+        margin: 6px 0 0;
+    }
+
+    @@media (max-width: 900px) {
+        .vc-table thead th:nth-child(n+4),
+        .vc-table tbody td:nth-child(n+4) {
+            display: none;
+        }
+    }
+</style>
+
+<div class="vc-wrap">
+
+    <!-- Top bar -->
+    <div class="vc-topbar">
+        <div class="vc-brand">
+            <div class="vc-brand-icon">👤</div>
+            <div>
+                <p class="vc-brand-title">System Users</p>
+                <p class="vc-brand-sub">All registered users</p>
+            </div>
+        </div>
+        @Html.ActionLink(
+                 "＋ Add User",
+                 "CreateUser",
+                 "User",
+                 null,
+                 new { @class = "vc-btn-new" })
+    </div>
+
+    <!-- Table -->
+    <div class="vc-table-wrap">
+        <table class="vc-table">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>NIC</th>
+                    <th>Username</th>
+                    <th>Created By</th>
+                    <th>Created Date</th>
+                    <th>Updated By</th>
+                    <th>Updated Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (!Model.Any())
+                {
+                    <tr>
+                        <td colspan="8">
+                            <div class="vc-empty">
+                                <div class="vc-empty-emoji">👤</div>
+                                <p class="vc-empty-text">No users yet</p>
+                                <p class="vc-empty-sub">Add the first user to get started.</p>
+                            </div>
+                        </td>
+                    </tr>
+                }
+
+                @foreach (var item in Model)
+                {
+                    var initials = string.IsNullOrEmpty(item.FullName) ? "?" :
+                        string.Join("", item.FullName.Split(' ').Take(2).Select(w => w[0]));
+
+                    <tr>
+                        <td>
+                            <div class="vc-name-cell">
+                                <div class="vc-avatar">@initials</div>
+                                <div>
+                                    <div class="vc-name-main">@item.FullName</div>
+                                    <div class="vc-name-sub">@item.NIC</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>@item.NIC</td>
+                        <td>@item.Username</td>
+                        <td>@item.CreatedBy</td>
+                        <td>@item.CreatedDate</td>
+                        <td>@item.UpdatedBy</td>
+                        <td>@item.UpdatedDate</td>
+                        <td>
+                            <div class="vc-actions">
+                                @Html.ActionLink(
+                                             "Edit",
+                                             "Edit",
+                                             new { id = item.UserId },
+                                             new { @class = "vc-act act-edit" })
+                                @Html.ActionLink(
+                                             "Delete",
+                                             "Delete",
+                                             new { id = item.UserId },
+                                             new { @class = "vc-act act-delete" })
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>
