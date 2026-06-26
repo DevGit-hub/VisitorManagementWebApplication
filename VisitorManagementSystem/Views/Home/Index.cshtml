@@ -205,7 +205,8 @@
 
 <main>
     <div class="vmd-wrap">
-        <div class="vmd-header">
+
+       <div class="vmd-header">
             <div class="vmd-header-icon">🏢</div>
             <div class="vmd-header-text">
                 <h2>Visitor Management Dashboard</h2>
@@ -213,56 +214,116 @@
             </div>
         </div>
 
-        <div class="vmd-grid">
+       <div class="vmd-grid">
 
-            <!-- Total Visitors -->
-            <div class="vmd-card card-blue">
-                <div class="vmd-card-glow"></div>
-                <div class="vmd-card-top">
-                    <div class="vmd-icon-circle">👥</div>
-                    <span class="vmd-card-badge">All Time</span>
-                </div>
-                <p class="vmd-card-label">Total Visitors</p>
-                <h2 class="vmd-card-value">@ViewBag.TotalVisitors</h2>
-                <div class="vmd-card-divider"></div>
-                <div class="vmd-card-meta">
-                    <span class="vmd-dot"></span>
-                    Cumulative records
-                </div>
-            </div>
+           <!-- Total Visitors -->
+           <div class="vmd-card card-blue">
+               <div class="vmd-card-glow"></div>
+               <div class="vmd-card-top">
+                   <div class="vmd-icon-circle">👥</div>
+                   <span class="vmd-card-badge">All Time</span>
+               </div>
+               <p class="vmd-card-label">Total Visitors</p>
+               <h2 class="vmd-card-value">@ViewBag.TotalVisitors</h2>
+               <div class="vmd-card-divider"></div>
+               <div class="vmd-card-meta">
+                   <span class="vmd-dot"></span>
+                   Cumulative records
+               </div>
+           </div>
 
-            <!-- Today's Visitors -->
-            <div class="vmd-card card-teal">
-                <div class="vmd-card-glow"></div>
-                <div class="vmd-card-top">
-                    <div class="vmd-icon-circle">📅</div>
-                    <span class="vmd-card-badge">Today</span>
-                </div>
-                <p class="vmd-card-label">Today's Visitors</p>
-                <h2 class="vmd-card-value">@ViewBag.TodayVisitors</h2>
-                <div class="vmd-card-divider"></div>
-                <div class="vmd-card-meta">
-                    <span class="vmd-dot"></span>
-                    Since midnight
-                </div>
-            </div>
+           <!-- Today's Visitors -->
+           <div class="vmd-card card-teal">
+               <div class="vmd-card-glow"></div>
+               <div class="vmd-card-top">
+                   <div class="vmd-icon-circle">📅</div>
+                   <span class="vmd-card-badge">Today</span>
+               </div>
+               <p class="vmd-card-label">Today's Visitors</p>
+               <h2 class="vmd-card-value">@ViewBag.TodayVisitors</h2>
+               <div class="vmd-card-divider"></div>
+               <div class="vmd-card-meta">
+                   <span class="vmd-dot"></span>
+                   Since midnight
+               </div>
+           </div>
 
-            <!-- Currently Inside -->
-            <div class="vmd-card card-amber">
-                <div class="vmd-card-glow"></div>
-                <div class="vmd-card-top">
-                    <div class="vmd-icon-circle">🚪</div>
-                    <span class="vmd-card-badge">Live</span>
-                </div>
-                <p class="vmd-card-label">Currently Inside</p>
-                <h2 class="vmd-card-value">@ViewBag.CurrentVisitors</h2>
-                <div class="vmd-card-divider"></div>
-                <div class="vmd-card-meta">
-                    <span class="vmd-dot"></span>
-                    On premises now
-                </div>
-            </div>
+           <!-- Currently Inside -->
+           <div class="vmd-card card-amber">
+               <div class="vmd-card-glow"></div>
+               <div class="vmd-card-top">
+                   <div class="vmd-icon-circle">🚪</div>
+                   <span class="vmd-card-badge">Live</span>
+               </div>
+               <p class="vmd-card-label">Currently Inside</p>
+               <h2 class="vmd-card-value">@ViewBag.CurrentVisitors</h2>
+               <div class="vmd-card-divider"></div>
+               <div class="vmd-card-meta">
+                   <span class="vmd-dot"></span>
+                   On premises now
+               </div>
+           </div>
 
-        </div>
+           <!--yersterday -->
+           <div class="vmd-card card-blue">
+               <div class="vmd-card-glow"></div>
+
+               <div class="vmd-card-top">
+                   <div class="vmd-icon-circle">📅</div>
+                   <span class="vmd-card-badge">Yesterday</span>
+               </div>
+
+               <p class="vmd-card-label">Yesterday Visitors</p>
+               <h2 class="vmd-card-value">@ViewBag.YesterdayVisitors</h2>
+
+               <div class="vmd-card-divider"></div>
+
+               <div class="vmd-card-meta">
+                   <span class="vmd-dot"></span>
+                   Previous day records
+               </div>
+           </div>
+
+           <!-- This month -->
+           <div class="vmd-card card-teal">
+               <div class="vmd-card-glow"></div>
+
+               <div class="vmd-card-top">
+                   <div class="vmd-icon-circle">📆</div>
+                   <span class="vmd-card-badge">Monthly</span>
+               </div>
+
+               <p class="vmd-card-label">This Month Visitors</p>
+               <h2 class="vmd-card-value">@ViewBag.MonthVisitors</h2>
+
+               <div class="vmd-card-divider"></div>
+
+               <div class="vmd-card-meta">
+                   <span class="vmd-dot"></span>
+                   Monthly total
+               </div>
+           </div>
+
+           <!-- This Year -->
+           <div class="vmd-card card-amber">
+               <div class="vmd-card-glow"></div>
+
+               <div class="vmd-card-top">
+                   <div class="vmd-icon-circle">📊</div>
+                   <span class="vmd-card-badge">Yearly</span>
+               </div>
+
+               <p class="vmd-card-label">This Year Visitors</p>
+               <h2 class="vmd-card-value">@ViewBag.YearVisitors</h2>
+
+               <div class="vmd-card-divider"></div>
+
+               <div class="vmd-card-meta">
+                   <span class="vmd-dot"></span>
+                   Yearly statistics
+               </div>
+           </div>
+
+       </div>
     </div>
 </main>
