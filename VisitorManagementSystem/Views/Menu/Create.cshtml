@@ -13,21 +13,22 @@
 
             <div>
                 <label>
-                    <input type="checkbox"
-                           name="Roles"
-                           value="Admin" />
-                    Admin
+                    @foreach (var role in ViewBag.Roles)
+                    {
+                        <div>
+                            <label>
+                                <input type="checkbox"
+                                       name="RoleIds"
+                                       value="@role.RoleId" />
+                                @role.RoleName
+                            </label>
+                        </div>
+                    }
+                    
                 </label>
             </div>
 
-            <div>
-                <label>
-                    <input type="checkbox"
-                           name="Roles"
-                           value="User" />
-                    User
-                </label>
-            </div>
+            
         </div>
     </div>
 

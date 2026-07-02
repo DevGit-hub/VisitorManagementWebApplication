@@ -15,11 +15,13 @@ namespace VisitorManagementSystem.Models
         }
 
         public DbSet<Visitor> Visitors { get; set; }
-        public DbSet<User> Users {get; set;}
+        public DbSet<User> Users { get; set; }
 
         public DbSet<Menu> Menus { get; set; }
 
         public DbSet<RoleMenu> RoleMenus { get; set; }
+
+        public DbSet<Role> Roles { get; set; }
 
 
     }

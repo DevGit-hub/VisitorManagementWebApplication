@@ -1,4 +1,6 @@
-﻿@model List<VisitorManagementSystem.Models.Menu>
+﻿@model IEnumerable<VisitorManagementSystem.Models.Menu>
+@using System.Linq
+
 
 @{
     var parents = Model.Where(m => m.ParentMenuId == null).ToList();

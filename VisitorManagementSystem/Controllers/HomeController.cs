@@ -56,7 +56,7 @@ namespace VisitorManagementSystem.Controllers
                 ViewBag.YearVisitors = visitors.Count(v =>
                     v.CheckInTime >= startYear);
 
-                // CUSTOM FILTER (optional)
+                // CUSTOM FILTER
                 if (fromDate != null && toDate != null)
                 {
                     ViewBag.FilterVisitors = visitors.Count(v =>

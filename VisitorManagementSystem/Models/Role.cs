@@ -3,19 +3,17 @@ using System.ComponentModel.DataAnnotations;
 
 namespace VisitorManagementSystem.Models
 {
-    public class RoleMenu
+    public class Role
     {
         [Key]
-        public int RoleMenuId { get; set; }
-
-        
-
         public int RoleId { get; set; }
-        public virtual Role Role { get; set; }
 
-        public int MenuId { get; set; }
+        [Required]
+        public string RoleName { get; set; }
 
-        public virtual Menu Menu { get; set; }
+        public string Description { get; set; }
+
+        public bool IsDeleted { get; set; }
 
         public string CreatedBy { get; set; }
         public DateTime? CreatedDate { get; set; }

@@ -356,7 +356,10 @@
                 <p class="vc-brand-sub">All registered visitors</p>
             </div>
         </div>
+        @if (Session["RoleId"] != null && Convert.ToInt32(Session["RoleId"]) != 2)
+        {
         @Html.ActionLink("＋ Register Visitor", "Create", null, new { @class = "vc-btn-new" })
+        }
     </div>
 
     <!-- Search -->
@@ -441,37 +444,43 @@
                         <td>
                             <div class="vc-actions">
 
-                                @if (item.CheckOutTime == null)
+                                @if ((int)Session["RoleId"] != 2 && item.CheckOutTime == null)
                                 {
                                     @Html.ActionLink(
-                                             "Check Out",
-                                             "CheckOut",
-                                             new { id = item.VisitorID },
-                                             new { @class = "vc-act act-details" }
-                                         )
+                                                       "Check Out",
+                                                       "CheckOut",
+                                                       new { id = item.VisitorID },
+                                                       new { @class = "vc-act act-details" }
+                                                   )
+                                }
+
+                                @if ((int)Session["RoleId"] != 2)
+                                {
+
+                                    @Html.ActionLink(
+                                                           "Edit",
+                                                           "Edit",
+                                                           new { id = item.VisitorID },
+                                                           new { @class = "vc-act act-edit" }
+                                                       )
                                 }
 
                                 @Html.ActionLink(
-                                        "Edit",
-                                        "Edit",
-                                        new { id = item.VisitorID },
-                                        new { @class = "vc-act act-edit" }
-                                    )
+                                                  "Details",
+                                                  "Details",
+                                                  new { id = item.VisitorID },
+                                                  new { @class = "vc-act act-details" }
+                                              )
 
-                                @Html.ActionLink(
-                                        "Details",
-                                        "Details",
-                                        new { id = item.VisitorID },
-                                        new { @class = "vc-act act-details" }
-                                    )
+                                @if ((int)Session["RoleId"] != 2)
 
-                                @Html.ActionLink(
-                                        "Delete",
-                                        "Delete",
-                                        new { id = item.VisitorID },
-                                        new { @class = "vc-act act-delete" }
-                                    )
-
+                                {@Html.ActionLink(
+                                                     "Delete",
+                                                     "Delete",
+                                                     new { id = item.VisitorID },
+                                                     new { @class = "vc-act act-delete" }
+                                                 )
+                            }
                             </div>
                         </td>
                     </tr>

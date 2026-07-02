@@ -22,7 +22,10 @@ namespace VisitorManagementSystem.Models
         public string Password { get; set; }
 
 
-        public string Role { get; set; }
+
+        public int RoleId { get; set; }
+
+        public virtual Role Role { get; set; }
 
         public string CreatedBy { get; set; }
 

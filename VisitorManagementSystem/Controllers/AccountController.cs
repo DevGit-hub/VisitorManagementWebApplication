@@ -43,7 +43,7 @@ namespace VisitorManagementSystem.Controllers
                     {
                         Session["UserId"] = user.UserId;
                         Session["Username"] = user.Username;
-                        Session["Role"] = user.Role;
+                        Session["RoleId"] = user.RoleId;
 
                         return RedirectToAction("Index", "Home");
                     }

@@ -19,12 +19,14 @@ namespace VisitorManagementSystem.Controllers
                 return;
             }
 
-            if (Session["Role"].ToString() != "Admin")
+            if (Session["RoleId"] == null)
             {
                 filterContext.Result =
-                    RedirectToAction("Index", "Home");
+                    RedirectToAction("Login", "Account");
                 return;
             }
+
+           
 
             base.OnActionExecuting(filterContext);
         }
@@ -48,7 +50,7 @@ namespace VisitorManagementSystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                user.Role = "User";
+                user.RoleId = 3;
 
                 user.Password =
                     BCrypt.Net.BCrypt.HashPassword(user.Password);
@@ -68,6 +70,34 @@ namespace VisitorManagementSystem.Controllers
             return View(user);
         }
 
+        public ActionResult CreateManager()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateManager(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                user.RoleId = 2;   // Manager
+
+                user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
+
+                user.CreatedBy = Session["Username"].ToString();
+                user.CreatedDate = DateTime.Now;
+
+                db.Users.Add(user);
+                db.SaveChanges();
+
+                return RedirectToAction("Managers");
+            }
+
+            return View(user);
+        }
+
+
         public ActionResult CreateAdmin()
         {
             return View();
@@ -79,7 +109,7 @@ namespace VisitorManagementSystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                user.Role = "Admin";
+                user.RoleId = 1; // Admin
 
                 user.Password =
                     BCrypt.Net.BCrypt.HashPassword(user.Password);
@@ -102,7 +132,7 @@ namespace VisitorManagementSystem.Controllers
         public ActionResult Admins()
         {
             var admins = db.Users
-                  .Where(u => u.Role == "Admin" &&
+                  .Where(u => u.Role.RoleName == "Admin" &&
                               !u.IsDeleted)
                   .ToList();
 
@@ -112,11 +142,21 @@ namespace VisitorManagementSystem.Controllers
         public ActionResult Users()
         {
             var users = db.Users
-                  .Where(u => u.Role == "User" &&
+                  .Where(u => u.Role.RoleName == "User" &&
                               !u.IsDeleted)
                   .ToList();
 
             return View(users);
+        }
+
+        public ActionResult Managers()
+        {
+            var managers = db.Users
+                             .Where(u => u.RoleId == 2 &&
+                                         !u.IsDeleted)
+                             .ToList();
+
+            return View(managers);
         }
 
         public ActionResult Edit(int id)
@@ -154,7 +194,7 @@ namespace VisitorManagementSystem.Controllers
 
                 db.SaveChanges();
 
-                if (existingUser.Role == "Admin")
+                if (existingUser.Role.RoleName == "Admin")
                 {
                     return RedirectToAction("Admins");
                 }

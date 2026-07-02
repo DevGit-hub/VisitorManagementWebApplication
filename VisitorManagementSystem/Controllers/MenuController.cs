@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
+using System.Web.Security;
 using VisitorManagementSystem.Models;
 
 public class MenuController : Controller
@@ -22,17 +23,17 @@ public class MenuController : Controller
     // SIDEBAR 
     public PartialViewResult Sidebar()
     {
-        if (Session["Role"] == null)
+        if (Session["RoleId"] == null)
         {
             return PartialView("_Sidebar", new List<Menu>());
         }
 
-        var role = Session["Role"].ToString();
+        var roleId = Convert.ToInt32(Session["RoleId"]);
 
         var menuIds = db.RoleMenus
-                        .Where(r => r.Role == role)
-                        .Select(r => r.MenuId)
-                        .ToList();
+            .Where(r => r.RoleId == roleId)
+            .Select(r => r.MenuId)
+            .ToList();
 
         var menus = db.Menus
                       .Where(m => menuIds.Contains(m.MenuId) && m.IsActive)
@@ -76,12 +77,16 @@ public class MenuController : Controller
                         .Where(m => m.IsActive)
                         .ToList();
 
+        ViewBag.Roles = db.Roles
+                      .Where(r => !r.IsDeleted)
+                      .ToList();
+
         return View();
     }
 
     // CREATE MENU (POST)
     [HttpPost]
-public ActionResult Create(Menu menu, string[] Roles)
+public ActionResult Create(Menu menu, int[] RoleIds)
     {
         if (ModelState.IsValid)
         {
@@ -93,14 +98,15 @@ public ActionResult Create(Menu menu, string[] Roles)
             db.Menus.Add(menu);
             db.SaveChanges();
 
-            if (Roles != null)
+            if (RoleIds != null)
             {
-                foreach (var role in Roles)
+                foreach (var roleId in RoleIds)
                 {
                     db.RoleMenus.Add(new RoleMenu
                     {
-                        Role = role,
+                        RoleId = roleId,
                         MenuId = menu.MenuId,
+
                         CreatedBy = Session["Username"].ToString(),
                         CreatedDate = DateTime.Now
                     });

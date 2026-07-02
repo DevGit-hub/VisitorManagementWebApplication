@@ -236,20 +236,16 @@
         <div class="vc-brand">
             <div class="vc-brand-icon">👤</div>
             <div>
-                <p class="vc-brand-title">System Users</p>
-                <p class="vc-brand-sub">All registered users</p>
+                <p class="vc-brand-title">System Managers</p>
+                <p class="vc-brand-sub">All registered Managers</p>
             </div>
         </div>
-        @if (Session["RoleId"] != null && Convert.ToInt32(Session["RoleId"]) != 2)
-        {
-
         @Html.ActionLink(
-                               "＋ Add User",
-                               "CreateUser",
-                               "User",
-                               null,
-                               new { @class = "vc-btn-new" })
-        }
+                      "＋ Add Manager",
+                      "CreateManager",
+                      "User",
+                      null,
+                      new { @class = "vc-btn-new" })
     </div>
 
     <!-- Table -->
@@ -264,10 +260,7 @@
                     <th>Created Date</th>
                     <th>Updated By</th>
                     <th>Updated Date</th>
-                    @if (Session["RoleId"] != null && Convert.ToInt32(Session["RoleId"]) != 2)
-                    {
-                     <th>Actions</th>
-                    }
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -277,8 +270,8 @@
                         <td colspan="8">
                             <div class="vc-empty">
                                 <div class="vc-empty-emoji">👤</div>
-                                <p class="vc-empty-text">No users yet</p>
-                                <p class="vc-empty-sub">Add the first user to get started.</p>
+                                <p class="vc-empty-text">No Managers yet</p>
+                                <p class="vc-empty-sub">Add the first manager to get started.</p>
                             </div>
                         </td>
                     </tr>
@@ -306,23 +299,18 @@
                         <td>@item.UpdatedBy</td>
                         <td>@item.UpdatedDate</td>
                         <td>
-                            @if (Session["RoleId"] != null && Convert.ToInt32(Session["RoleId"]) != 2)
-                            {
-
-
                             <div class="vc-actions">
                                 @Html.ActionLink(
-                                                       "Edit",
-                                                       "Edit",
-                                                       new { id = item.UserId },
-                                                       new { @class = "vc-act act-edit" })
+                                                  "Edit",
+                                                  "Edit",
+                                                  new { id = item.UserId },
+                                                  new { @class = "vc-act act-edit" })
                                 @Html.ActionLink(
-                                                       "Delete",
-                                                       "Delete",
-                                                       new { id = item.UserId },
-                                                       new { @class = "vc-act act-delete" })
+                                                  "Delete",
+                                                  "Delete",
+                                                  new { id = item.UserId },
+                                                  new { @class = "vc-act act-delete" })
                             </div>
-                            }
                         </td>
                     </tr>
                 }
